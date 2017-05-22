@@ -1,0 +1,19 @@
+<div class="modal-header">
+  <h3 class="modal-title" id="modal-title">Create a new repo metric visualization</h3>
+</div>
+<div class="modal-body" id="modal-body">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="queryModel">Repo</label>
+      <div class="col-sm-10">
+        <select name="queryModel" id="queryModel" ng-model="selectedModel">
+          <option ng-repeat="repo in reposs" value="{{ repo.id }}">{{ repo.name }}</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn" type="button" ng-click="cancel()">Cancel</button>
+  <button class="btn btn-primary" type="button" ng-click="ok()">Visualize</button>
+</div>
